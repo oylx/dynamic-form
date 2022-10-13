@@ -1,10 +1,10 @@
 <template>
-$END$
+  <div>1</div>
 </template>
 
 <script>
 export default {
-name: "FormItem"
+  name: 'FormItem'
 }
 </script>
 

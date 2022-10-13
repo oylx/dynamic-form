@@ -1,10 +1,10 @@
 <template>
-$END$
+  <div>DynamicForms</div>
 </template>
 
 <script>
 export default {
-name: "index"
+  name: 'DynamicForm'
 }
 </script>
 
