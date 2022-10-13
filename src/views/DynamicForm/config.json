@@ -1,0 +1,41 @@
+{
+  "inline": false,
+  "labelPosition": "right",
+  "labelWidth": "",
+  "size": "small",
+  "statusIcon": true,
+  "formItemList": [
+    {
+      "type": "input",
+      "label": "姓名",
+      "disable": false,
+      "readonly": false,
+      "value": "",
+      "placeholder": "请输入姓名",
+      "rules": [],
+      "key": "name",
+      "subtype": "text"
+    },
+    {
+      "type": "radio",
+      "label": "性别",
+      "value": "",
+      "button": false,
+      "border": true,
+      "rules": [],
+      "key": "gender",
+      "options": [
+        {
+          "value": "1",
+          "label": "男",
+          "disabled": false
+        },
+        {
+          "value": "0",
+          "label": "女",
+          "disabled": false
+        }
+      ]
+    }
+  ]
+}

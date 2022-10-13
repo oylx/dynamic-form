@@ -1,10 +1,17 @@
 <template>
-  <div>DynamicForms</div>
+  <dynamic-form :form-config="formConfig" v-model="formData" />
 </template>
 
 <script>
+import formConfig from './config.json'
 export default {
-  name: 'DynamicForm'
+  name: 'DynamicIndex',
+  data() {
+    return {
+      formConfig,
+      formData: {}
+    }
+  }
 }
 </script>
 
