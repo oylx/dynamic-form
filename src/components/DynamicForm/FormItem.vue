@@ -28,6 +28,21 @@
         :disabled="o.disabled">
       </el-option>
     </el-select>
+    <el-radio-group
+      v-else-if="item.type==='radio-group'"
+      v-bind="$attrs"
+      v-on="$listeners"
+    >
+      <component
+        v-for="o in item.options"
+        :is="item.button?'el-radio-button':'el-radio'"
+        :key="o.value"
+        :label="o.value"
+        :disabled="o.disabled"
+        :border="item.border"
+      >{{ o.label }}
+      </component>
+    </el-radio-group>
   </el-form-item>
 </template>
 

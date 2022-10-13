@@ -1,4 +1,4 @@
-import DynamicForm from '@/components/DynamicForm/DynamicForm'
+import DynamicForm from '@/components/DynamicForm/Form'
 export default {
   install: (Vue) => {
     Vue.component(DynamicForm.name, DynamicForm)

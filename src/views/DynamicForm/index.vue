@@ -1,5 +1,5 @@
 <template>
-  <dynamic-form :form-config="formConfig" v-model="formData" />
+    <dynamic-form :form-config="formConfig" v-model="formData" />
 </template>
 
 <script>
@@ -9,7 +9,15 @@ export default {
   data() {
     return {
       formConfig,
-      formData: {}
+      formData: {
+        gender: '0',
+        name: 'seven'
+      },
+    }
+  },
+  methods: {
+    onSubmit() {
+      console.log('submit!');
     }
   }
 }

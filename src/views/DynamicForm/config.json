@@ -1,7 +1,7 @@
 {
   "inline": false,
   "labelPosition": "right",
-  "labelWidth": "",
+  "labelWidth": "120px",
   "size": "small",
   "statusIcon": true,
   "formItemList": [
@@ -17,11 +17,11 @@
       "subtype": "text"
     },
     {
-      "type": "radio",
+      "type": "radio-group",
       "label": "性别",
       "value": "",
       "button": false,
-      "border": true,
+      "border": false,
       "rules": [],
       "key": "gender",
       "options": [

@@ -48,10 +48,10 @@ export default {
       this.formConfig?.formItemList.forEach(item => {
         const { key, value } = item
         if ([undefined, null].includes(formData[key])) {
+          console.log(formData[key])
           formData[key] = value
         }
       })
-      this.$emit('input', { ...formData })
     },
     handleInput(val, key) {
       // 这里element-ui没有上报event，直接就是value了
