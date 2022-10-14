@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'PictureDemo',
+  name: 'VPicture',
   props: {
     propValue: {
       type: String,

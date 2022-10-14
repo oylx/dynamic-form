@@ -1,9 +1,21 @@
 <template>
-  <div></div>
+  <left-components />
 </template>
 <script>
+
+import LeftComponents from '@/components/VisualDrag/LeftComponents'
 export default {
-  name: 'VisualDrag'
+  name: 'VisualDrag',
+  components: { LeftComponents },
+  data() {
+    return {
+      componentList: []
+    }
+  },
+  methods: {
+
+
+  }
 }
 
 </script>

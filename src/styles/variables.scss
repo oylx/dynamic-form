@@ -1,0 +1,86 @@
+$primaryColor: #36A4FF;
+// base color
+$blue: #324157;
+$light-blue: #3a71a8;
+$red: #c03639;
+$pink: #e65d6e;
+$green: #30b08f;
+$tiffany: #4ab7bd;
+$yellow: #fec171;
+$panGreen: #30b08f;
+$white: #fff;
+$black: #000;
+$grey: #ccc;
+// 状态 color
+$warn: #fa8b16;
+$success: #4cc09e;
+$error: #ff4d4f;
+$defaultGrey: #a9a9a9;
+$disabled: #bdbdbd;
+// content 内容区背景
+$contentBg: #f3f4fb;
+$tipsColor: #36a4ff;
+// font
+$fontColor: #202020;
+$errorColor: #f95f5b;
+$fontColorInfo: #8A8A8A;
+$fontColorValue: #4B4B4B;
+// font-size
+$fontSize18: 18px;
+$fontSize16: 16px;
+$fontSizeBase: 14px;
+//navbar
+// $navBg: #13151E;
+$navBg: #ffffff;
+$navFontColor: rgba($fontColor, 0.85);
+$menuBg: #f9fafe;
+// searchPanel
+$panelBg: #fafafb;
+$menuHover: #E6EEFF;
+$sideBarWidth: 255px;
+$footerMargin: 16px;
+$sideBarCollapseWidth: 28px;
+$collapseSubmenuLeft: 39.5px;
+$breadCrumbHeight: 64px;
+$clientMaxWidth: 760px;
+$pageMinWidth: 1024px;
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+    // menuText: $menuText;
+    // menuActiveText: $menuActiveText;
+    // subMenuActiveText: $subMenuActiveText;
+    menuBg: $menuBg;
+    menuHover: $menuHover;
+    // subMenuBg: $subMenuBg;
+    // subMenuHover: $subMenuHover;
+    sideBarWidth: $sideBarWidth;
+    sideBarCollapseWidth: $sideBarCollapseWidth;
+    breadCrumbHeight: $breadCrumbHeight;
+}
+
+%center_middle_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%header_font {
+    font-size: 14px;
+    color: $white;
+    line-height: 32px;
+}
+
+%menu_item_hover {
+    background: $menuHover;
+    background-size: calc(#{$sideBarWidth} - 15px);
+    background-repeat: no-repeat;
+    background-position: 5px;
+    color: $primaryColor;
+}
+
+%event_content_flex {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

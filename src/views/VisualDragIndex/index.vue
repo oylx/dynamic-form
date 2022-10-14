@@ -1,10 +1,10 @@
 <template>
-  <div>VisualDrag</div>
+  <visual-drag />
 </template>
 
 <script>
 export default {
-  name: 'VisualDrag'
+  name: 'VisualDragIndex'
 }
 </script>
 

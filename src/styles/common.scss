@@ -1,0 +1,17 @@
+.no-suffix-dialog{
+    .el-dialog__body {
+        .no-suffix {
+            .el-input__suffix {
+                display: none;
+            }
+        }
+
+    }
+}
+.no-suffix {
+    ::v-deep {
+        .el-input__suffix {
+            display: none;
+        }
+    }
+}

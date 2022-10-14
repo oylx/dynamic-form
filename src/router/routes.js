@@ -3,9 +3,8 @@ export const routes = [
     path: '/',
     component: () => import('@/views/layout'),
     name: '首页',
-    children: [
-      { path: '', component: () => import('@/views/DynamicForm'), },
-    ]
+    redirect: '/VisualDrag'
+
   },
   {
     path: '/DynamicForm',
@@ -20,7 +19,7 @@ export const routes = [
     component: () => import('@/views/layout'),
     name: '拖拽组件',
     children: [
-      { path: '', component: () => import('@/views/VisualDrag'), },
+      { path: '', component: () => import('@/views/VisualDragIndex'), },
     ]
   },
 ]
