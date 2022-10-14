@@ -1,14 +1,26 @@
-import DynamicForm from '@/views/DynamicForm'
-import VisualDrag from '@/views/VisualDrag'
-import Layout from '@/layout'
-
 export const routes = [
   {
     path: '/',
-    component: () => Layout,
+    component: () => import('@/views/layout'),
+    name: '首页',
     children: [
-      { path: 'DynamicForm', component: () => DynamicForm, name: '动态表单', },
-      { path: 'VisualDrag', component: () => VisualDrag, name: '拖拽组件', },
+      { path: '', component: () => import('@/views/DynamicForm'), },
+    ]
+  },
+  {
+    path: '/DynamicForm',
+    component: () => import('@/views/layout'),
+    name: '动态表单',
+    children: [
+      { path: '', component: () => import('@/views/DynamicForm'), },
+    ]
+  },
+  {
+    path: '/VisualDrag',
+    component: () => import('@/views/layout'),
+    name: '拖拽组件',
+    children: [
+      { path: '', component: () => import('@/views/VisualDrag'), },
     ]
   },
 ]
