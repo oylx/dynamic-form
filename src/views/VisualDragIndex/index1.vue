@@ -1,11 +1,9 @@
 <template>
-  <div class="home">
-    <main>
-      <!-- 左侧组件列表 -->
+  <div class="visual-drag-wrapper">
+
       <section class="left">
         <ComponentList />
       </section>
-      <!-- 中间画布 -->
       <section class="center">
         <div
           class="content"
@@ -17,27 +15,21 @@
           <Editor />
         </div>
       </section>
-    </main>
   </div>
 </template>
-
 <script>
-import Editor from '@/components/VisualDrag/Editor/index'
-import ComponentList from '@/components/VisualDrag/ComponentList' // 左侧列表组件
-// import AnimationList from '@/components/VisualDrag/AnimationList' // 右侧动画列表
-// import EventList from '@/components/VisualDrag/EventList' // 右侧事件列表
-import componentList from '@/custom-component/component-list' // 左侧列表数据
-// import Toolbar from '@/components/VisualDrag/Toolbar'
-import { deepCopy } from '@/utils/utils'
-import { mapState } from 'vuex'
+import ComponentList from '@/components/VisualDrag/ComponentList'
+import componentList from '@/components/VisualDrag/ComponentList'
+import { deepCopy } from '@/utils'
 import generateID from '@/utils/generateID'
-import { listenGlobalKeyDown } from '@/utils/shortcutKey'
-// import CanvasAttr from '@/components/VisualDrag/CanvasAttr'
 import { changeComponentSizeWithScale } from '@/utils/changeComponentsSizeWithScale'
+import { listenGlobalKeyDown } from '@/utils/shortcutKey'
 import { setDefaultcomponentData } from '@/store/snapshot'
+import Editor from '@/components/VisualDrag/Editor'
+import { mapState } from 'vuex'
 
 export default {
-  name: 'VisualDragIndex',
+  name: 'VisualDragIndex1',
   components: { ComponentList, Editor },
   data() {
     return {
@@ -117,15 +109,15 @@ export default {
     },
   },
 }
-</script>
 
-<style lang="scss">
-.home {
+</script>
+<style lang="less" scoped>
+
+.visual-drag-wrapper {
   height: 100vh;
   background: #fff;
 
-  main {
-    height: calc(100% - 64px);
+
     position: relative;
 
     .left {
@@ -170,15 +162,6 @@ export default {
         overflow: auto;
       }
     }
-  }
 
-  .placeholder {
-    text-align: center;
-    color: #333;
-  }
-
-  .global-attr {
-    padding: 10px;
-  }
 }
 </style>

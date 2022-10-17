@@ -19,7 +19,15 @@ export const routes = [
     component: () => import('@/views/layout'),
     name: '拖拽组件',
     children: [
-      { path: '', component: () => import('@/views/VisualDragIndex'), },
+      { path: '', component: () => import('@/views/VisualDragIndex/index'), },
+    ]
+  },
+  {
+    path: '/VisualDrag1',
+    component: () => import('@/views/layout'),
+    name: '拖拽组件1',
+    children: [
+      { path: '', component: () => import('@/views/VisualDragIndex/index1'), },
     ]
   },
 ]

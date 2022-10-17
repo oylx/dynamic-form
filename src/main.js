@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import Element from 'element-ui'
-import '@/styles/index.scss'
-import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue'
 import store from'@/store'
 import router from '@/router'
 import globalComponents from '@/components/index'
 import { routes } from '@/router/routes'
+
+import '@/assets/iconfont/iconfont.css'
+import '@/styles/animate.scss'
+import 'element-ui/lib/theme-chalk/index.css'
+import '@/styles/reset.css'
+import '@/styles/global.scss'
 
 Vue.config.productionTip = false
 Vue.use(Element)
