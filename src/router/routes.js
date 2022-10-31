@@ -16,4 +16,12 @@ export const routes = [
       { path: '', component: () => import('@/views/DynamicForm'), },
     ]
   },
+  {
+    path: '/customDrag',
+    component: () => import('@/views/layout'),
+    name: '定制菜单',
+    children: [
+      { path: '', component: () => import('@/views/CustomDrag'), },
+    ]
+  },
 ]

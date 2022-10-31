@@ -1,7 +1,12 @@
 <template>
   <el-container>
-    <div class="sidebar">
-      <router-link v-for="(item, i) in routes" :key="i" :to="item.path" type="primary">{{ item.name }}</router-link>
+    <div class="sidebar" @dragstart="handleDragStart">
+      <router-link
+        v-for="(item, i) in routes"
+        :key="i" :to="item.path"
+        type="primary"
+        draggable
+        :data-index="item.path">{{ item.name }}</router-link>
     </div>
     <div class="main">
       <keep-alive>
@@ -31,7 +36,13 @@ export default {
     key() {
       return this.$route.path
     },
-  }
+  },
+  methods: {
+    handleDragStart(e) {
+      console.log('dragstart')
+      e.dataTransfer.setData('index', e.target.dataset.index)
+    },
+  },
 }
 </script>
 
@@ -51,7 +62,6 @@ export default {
   background-color: #E9EEF3;
   color: #333;
   text-align: center;
-  line-height: 160px;
   width: calc(100% - @sidebarWidth);
   height: calc(100vh);
 }
