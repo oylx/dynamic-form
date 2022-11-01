@@ -46,10 +46,10 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@sidebarWidth: 230px;
+<style lang="scss" scoped>
+$sidebarWidth: 230px;
 .sidebar {
-  width: @sidebarWidth;
+  width: $sidebarWidth;
   background-color: #D3DCE6;
   color: #333;
   text-align: center;
@@ -62,7 +62,7 @@ export default {
   background-color: #E9EEF3;
   color: #333;
   text-align: center;
-  width: calc(100% - @sidebarWidth);
+  width: calc(100% - $sidebarWidth);
   height: calc(100vh);
 }
 </style>

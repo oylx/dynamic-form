@@ -24,4 +24,12 @@ export const routes = [
       { path: '', component: () => import('@/views/CustomDrag'), },
     ]
   },
+  {
+    path: '/dragEcharts',
+    component: () => import('@/views/layout'),
+    name: 'echarts拖拽',
+    children: [
+      { path: '', component: () => import('@/views/DragEcharts'), },
+    ]
+  },
 ]

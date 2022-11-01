@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "echarts": "^5.4.0",
     "element-ui": "^2.15.10",
     "html-to-image": "^1.10.8",
     "mathjs": "^11.3.0",

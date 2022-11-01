@@ -5,6 +5,7 @@ import store from'@/store'
 import router from '@/router'
 import globalComponents from '@/components/index'
 import { routes } from '@/router/routes'
+import '@/custom-component' // 注册自定义组件
 
 import '@/assets/iconfont/iconfont.css'
 import '@/styles/animate.scss'
