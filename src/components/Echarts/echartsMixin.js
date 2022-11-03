@@ -1,4 +1,4 @@
-import { debounce } from '@/utils/index'
+import { debounce, createUUID } from '@/utils/index'
 import echarts from './common'
 
 export default {
@@ -29,7 +29,7 @@ export default {
     }
   },
   created() {
-    this.chartId = this.id
+    this.chartId = createUUID()
   },
   mounted() {
     /* 图表初始化 */

@@ -9,14 +9,12 @@ import layer from './layer'
 import snapshot from './snapshot'
 import lock from './lock'
 import app from './modules/app'
-import dataVisualization from './dataVisualization'
 
 Vue.use(Vuex)
 
 const data = {
     modules: {
         app,
-        dataVisualization
     },
     state: {
         ...animation.state,
