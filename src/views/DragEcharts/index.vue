@@ -68,6 +68,8 @@
                 <Component
                   class="drag-item-echarts-histogram"
                   :is="item.component"
+                  :width="item.width+'px'"
+                  :height="item.height+'px'"
                   :chart-data="item.chartData"
                 />
               </drag-resize>
@@ -117,29 +119,31 @@ export default {
   created() {
     const showComponentListCache = localStorage.getItem('showComponentListCache')
     const showComponentList = showComponentListCache ? JSON.parse(showComponentListCache) : []
-    this.showComponentList = showComponentList.map(({ component, itemId, left, top }) => {
+    this.showComponentList = showComponentList.map(({ component, itemId, left, top, width, height }) => {
       const itemConfig = dragList.find(v => v.component === component)
       return {
         itemId,
         left,
         top,
         component: itemConfig.component,
-        width: '400',
-        height: '300',
+        width,
+        height,
         chartData: JSON.parse(JSON.stringify(itemConfig.chartData))
       }
     }) || []
 
   },
   mounted() {
-    eventBus.$on('give-advice', ({ itemId, left = 0, top = 0, width = 0, height = 0 }) => {
+    eventBus.$on('give-advice', (val) => {
       this.$nextTick(() => {
-        console.log(itemId, top, left, width, height)
         this.showComponentList.forEach(v => {
-          if (v.itemId === itemId) {
-            v = { ... v, top, left, width, height }
+          if (v.itemId === val.itemId) {
+            const keys = ['width', 'height', 'left', 'top']
+            keys.forEach(key => v[key] = val[key])
+            console.log(v)
           }
         })
+        console.log(this.showComponentList)
       })
     })
   },
@@ -164,6 +168,7 @@ export default {
       }
       this.$nextTick(() => {
         this.showComponentList.push(item)
+        this.$forceUpdate()
       })
     },
     handleDragOver(e) {
@@ -265,8 +270,8 @@ export default {
 
       .drag-item-echarts {
         border: 1px solid red;
-        height: 300px;
-        width: 400px;
+        min-height: 300px;
+        min-width: 400px;
 
         .drag-item-echarts-histogram {
           height: 100%;

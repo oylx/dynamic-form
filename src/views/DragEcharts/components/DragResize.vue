@@ -135,7 +135,6 @@ export default {
             prev[key] = (el.style[key]).match(/\d+/)[0]
             return prev
           }, {})
-          console.log(target)
           eventBus.$emit('give-advice', { itemId, ...target })
         }
         return false

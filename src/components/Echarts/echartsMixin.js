@@ -64,6 +64,12 @@ export default {
       handler(val) {
         this.setOptions(val)
       }
+    },
+    width() {
+      this.chart.resize()
+    },
+    height() {
+      this.chart.resize()
     }
   },
   methods: {
