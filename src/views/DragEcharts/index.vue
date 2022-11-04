@@ -78,6 +78,10 @@
         </div>
       </el-col>
     </el-row>
+    <drag-dialog
+        :rowdata = dragDialogData
+        :visible = dragDialogVisible
+    />
   </div>
 </template>
 
