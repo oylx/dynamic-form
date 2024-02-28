@@ -1,7 +1,8 @@
+import layout from '@/views/layout'
 export const routes = [
   {
     path: '/',
-    component: () => import('@/views/layout'),
+    component: layout,
     name: '首页',
     redirect: '/VisualDrag',
     children: [
@@ -10,7 +11,7 @@ export const routes = [
   },
   {
     path: '/DynamicForm',
-    component: () => import('@/views/layout'),
+    component: layout,
     name: '动态表单',
     children: [
       { path: '', component: () => import('@/views/DynamicForm'), },
@@ -18,7 +19,7 @@ export const routes = [
   },
   {
     path: '/customDrag',
-    component: () => import('@/views/layout'),
+    component: layout,
     name: '定制菜单',
     children: [
       { path: '', component: () => import('@/views/CustomDrag'), },
@@ -26,7 +27,7 @@ export const routes = [
   },
   {
     path: '/dragEcharts',
-    component: () => import('@/views/layout'),
+    component: layout,
     name: 'echarts拖拽',
     children: [
       { path: '', component: () => import('@/views/DragEcharts'), },
